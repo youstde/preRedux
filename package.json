@@ -4,7 +4,7 @@
   "description": "redux",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node index.js"
+    "start": "babel-node ./store/index.js"
   },
   "author": "st",
   "dependencies": {},

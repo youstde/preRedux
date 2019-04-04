@@ -1,6 +1,6 @@
-import { createStore } from './redux';
-import { countReducer, infoReducer } from './redux/reducer';
-import combineReducer from './redux/combineReducer';
+import { createStore } from '../redux';
+import { countReducer, infoReducer } from './reducer/index';
+import combineReducer from '../redux/combineReducer';
 
 const initState = {
     count: {
