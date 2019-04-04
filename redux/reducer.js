@@ -1,14 +1,29 @@
 
-export default function (state, action) {
+function countReducer (state, action) {
     switch(action.type) {
         case 'ADD_COUNT': 
             return {
                 ...state,
-                count: state.count + 1
+                a: state.a + 1
             }
-            break;
         default: 
             return state;
-            break;
     }
+}
+
+function infoReducer (state, action) {
+    switch(action.type) {
+        case 'UPDATE_NAME': 
+            return {
+                ...state,
+                name: action.name
+            }
+        default: 
+            return state;
+    }
+}
+
+export {
+    countReducer,
+    infoReducer
 }
