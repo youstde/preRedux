@@ -17,6 +17,7 @@ export default function (reducer, initState) {
         });
     }
 
+    dispatch({type: Symbol()});
     
     function getState() {
         return state;
