@@ -1,4 +1,5 @@
 const test = (type) => (age) => {
+    // 这里的内容是最后一个函数的
     console.log(type);
     console.log(age);
 }

@@ -16,7 +16,7 @@ export default function (reducer, initState) {
             listener(state);
         });
     }
-
+    // 初始化state
     dispatch({type: Symbol()});
     
     function getState() {

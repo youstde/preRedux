@@ -9,6 +9,29 @@ const reducer = combineReducer({
 
 const store = createStore(reducer);
 
+const next = store.dispatch;
+
+const logerMiddleWare = (next) => (action) => {
+    console.log('logger:', 'logger');
+    next(action);
+}
+
+const timerMiddleWare = (next) => (action) => {
+    console.log('timer:', 'timer');
+    next(action);
+}
+
+const exception = (next) => (action) => {
+    try {
+        next(action);
+    } catch(err) {
+        console.log(err);
+    }
+}
+
+store.dispatch = exception(logerMiddleWare(timerMiddleWare(next)));
+
+
 store.subScribe(() => {
     console.log('I get you:', store.getState());
 });
